@@ -227,3 +227,22 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures=[
+    "Custom DocPerm",   
+    
+    {"dt":"Report","filters":[
+        [
+            "module","in",[
+               "Customization"
+            ]
+        ]
+    ]},
+    {"dt":"Client Script","filters":[
+        [
+            "module","in",[
+               "Customization"
+            ]
+        ]
+    ]}
+]
+
