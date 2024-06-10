@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Sales Invoice",
+  "enabled": 1,
+  "modified": "2024-06-05 19:37:57.811418",
+  "module": "Customization",
+  "name": "Income Account",
+  "script": "frappe.ui.form.on('Sales Invoice', {\r    onload: function(frm) {\r        frm.set_query('custom_incomesales_account', function() {\r            return {\r                filters: {\r                    'root_type': 'Income',\r                    'is_group': 0,\r                    'company': frm.doc.company\r                }\r            };\r        });\r    },\r    refresh(frm) {\r        if (frm.doc.custom_incomesales_account) {\r            frm.doc.items.forEach(row => {\r                row.income_account = frm.doc.custom_incomesales_account;\r            });\r            frm.refresh_field('items');\r        }\r    }\r});\r",
+  "view": "Form"
+ }
+]

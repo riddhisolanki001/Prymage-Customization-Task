@@ -1,8 +1,7 @@
-// Copyright (c) 2024, Sanskar Technolab Pvt. Ltd. and contributors
+// Copyright (c) 2024, riddhi and contributors
 // For license information, please see license.txt
-// eslint-disable //
 
-frappe.query_reports["Purchase Type Invoice"] = {
+frappe.query_reports["Purchase Ledger Report"] = {
 	"filters": [
 		{
 			"fieldname":"from_date",
