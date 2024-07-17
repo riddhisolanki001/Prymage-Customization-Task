@@ -5,19 +5,50 @@
  "disabled": 0,
  "docstatus": 0,
  "doctype": "Report",
- "filters": [],
+ "filters": [
+  {
+   "fieldname": "suppliers",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "mandatory": 0,
+   "options": "Supplier",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "purchase_type",
+   "fieldtype": "Select",
+   "label": "Purchase Type",
+   "mandatory": 0,
+   "options": "\nRaw Material Purchase - Scrap\nRaw Material Purchase- Billets \n\u2060Import Purchase- Spares\n\u2060Import Purchase- Consumables\nLocal Purchase- Spares & Consumables\nTrade Purchase - Others\nTrade Purchase- Iron Rods\nTrade Purchase - Profiles\nMiscellaneous Purchase\nGeneral\u00a0Purchase",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": "",
  "letterhead": null,
- "modified": "2024-07-15 13:25:07.952286",
+ "modified": "2024-07-17 11:06:08.862894",
  "modified_by": "Administrator",
  "module": "Customization",
- "name": "Purchase Ledger Summary",
+ "name": "Purchase Ledger  Summary",
  "owner": "Administrator",
  "prepared_report": 0,
  "ref_doctype": "Purchase Invoice",
- "report_name": "Purchase Ledger Summary",
+ "report_name": "Purchase Ledger  Summary",
  "report_type": "Script Report",
  "roles": [
   {

@@ -45,7 +45,7 @@
    "name": "Purchase Invoice-custom_purchase_type",
    "no_copy": 0,
    "non_negative": 0,
-   "options": "\nRaw Material Purchase - Scrap\nRaw Material Purchase- Billets \n\u2060Import Purchase- Spares\n\u2060Import Purchase- Consumables\nLocal Purchase- Spares & Consumables\nTrade Purchase - Others\nTrade Purchase- Iron Rods\nTrade Purchase - Profiles\nMiscellaneous Purchase\nGeneral\u00a0Purchase\n",
+   "options": "\nRaw Material Purchase - Scrap\nRaw Material Purchase- Billets \n\u2060Import Purchase- Spares\n\u2060Import Purchase- Consumables\nLocal Purchase- Spares & Consumables\nTrade Purchase - Others\nTrade Purchase- Iron Rods\nTrade Purchase - Profiles\nMiscellaneous Purchase\nGeneral\u00a0Purchase",
    "owner": "charles@prymage.com",
    "permlevel": 0,
    "precision": "",
