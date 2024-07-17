@@ -30,7 +30,7 @@ def execute(filters=None):
 
     conditions = []
     sql_args = []
-
+# test comment for git
     if filters:
         if filters.get("start_date"):
             conditions.append("posting_date >= %s")
