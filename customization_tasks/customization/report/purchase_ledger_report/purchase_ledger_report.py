@@ -29,7 +29,7 @@ def execute(filters=None):
                 P.conversion_rate,
                 P.due_date,
                 P.grand_total,
-				DATE(P.creation) as posting_date,
+				P.posting_date,
 				P.company,
 				P.supplier,
 				P.custom_purchase_type,
@@ -54,9 +54,9 @@ def execute(filters=None):
 			conditions.append("posting_date<=%s")
 			sql_args.append(filters.get("to_date"))
    
-		if filters.get("suppliers"):
+		if filters.get("supplier"):
 			conditions.append("supplier= %s")
-			sql_args.append(filters.get("suppliers"))   
+			sql_args.append(filters.get("supplier"))   
 
 	if conditions:
 		sql += " AND " + " AND ".join(conditions)
