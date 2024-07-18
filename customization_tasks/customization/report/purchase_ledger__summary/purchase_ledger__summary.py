@@ -16,12 +16,20 @@ def execute(filters=None):
             "fieldtype": "Currency",
             "width": 150,
         },
+        
+        {
+            "label": "Grand Total",
+            "fieldname": "total",
+            "fieldtype": "Currency",
+            "width": 150,
+        },
     ]
 
     sql = """
         SELECT
             custom_purchase_type AS purchase_type_name,
-            SUM(total) AS amount
+            SUM(total) AS amount,
+            SUM(grand_total) as total
         FROM
             `tabPurchase Invoice`
         WHERE

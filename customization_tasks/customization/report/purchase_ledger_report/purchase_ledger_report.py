@@ -41,12 +41,41 @@ def execute(filters=None):
 			JOIN `tabPurchase Invoice Item` AS PI ON P.name = PI.parent
 			WHERE P.docstatus = 1
 			"""
+   
+	conditions = []
+	sql_args = []
+ 
+	if filters:
+		if filters.get("from_date"):
+			conditions.append("posting_date>=%s")
+			sql_args.append(filters.get("from_date"))
+   
+		if filters.get("to_date"):
+			conditions.append("posting_date<=%s")
+			sql_args.append(filters.get("to_date"))
+   
+		if filters.get("suppliers"):
+			conditions.append("supplier= %s")
+			sql_args.append(filters.get("suppliers"))   
 
-	if filters.get('from_date') and filters.get('to_date'):
-		sql += f"AND DATE(P.creation) BETWEEN '{filters.get('from_date')}' AND '{filters.get('to_date')}'"
-	if filters.get('supplier'):
-		sql += f"AND P.supplier  = '{filters.get('supplier')}'"
-	sql += f"ORDER BY P.name"
+	if conditions:
+		sql += " AND " + " AND ".join(conditions)
 
-	data = frappe.db.sql(sql,as_dict = True)
+	sql += """
+			ORDER BY P.name
+	"""
+
+	data = frappe.db.sql(sql, tuple(sql_args), as_dict=True)
+
 	return columns, data
+	
+		
+
+	# if filters.get('from_date') and filters.get('to_date'):
+	# 	sql += f"AND DATE(P.creation) BETWEEN '{filters.get('from_date')}' AND '{filters.get('to_date')}'"
+	# if filters.get('supplier'):
+	# 	sql += f"AND P.supplier  = '{filters.get('supplier')}'"
+	# sql += f"ORDER BY P.name"
+
+	# data = frappe.db.sql(sql,as_dict = True)
+	# return columns, data
