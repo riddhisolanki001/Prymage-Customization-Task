@@ -41,7 +41,7 @@ def execute(filters=None):
 			JOIN `tabPurchase Invoice Item` AS PI ON P.name = PI.parent
 			WHERE P.docstatus = 1
 			"""
-   
+	# filter upgrade 
 	conditions = []
 	sql_args = []
  
