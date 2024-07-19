@@ -4,7 +4,8 @@ app_publisher = "riddhi"
 app_description = "Developement"
 app_email = "riddhi@sanskartechnolab.com"
 app_license = "mit"
-# required_apps = []
+required_apps = ["frappe/erpnext"]
+
 
 # Includes in <head>
 # ------------------
