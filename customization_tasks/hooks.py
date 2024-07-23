@@ -1,24 +1,26 @@
-app_name = "erp"
-app_title = "ERP"
-app_publisher = "Sanskar Technolab"
-app_description = "ERP"
-app_email = "meet@sanskartechnolab.com"
+
+app_name = "customization_tasks"
+app_title = "Customization"
+app_publisher = "riddhi"
+app_description = "Developement"
+app_email = "riddhi@sanskartechnolab.com"
 app_license = "mit"
 required_apps = ["frappe/erpnext"]
+
 
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/erp/css/erp.css"
-# app_include_js = "/assets/erp/js/erp.js"
+# app_include_css = "/assets/customization_tasks/css/customization_tasks.css"
+# app_include_js = "/assets/customization_tasks/js/customization_tasks.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/erp/css/erp.css"
-# web_include_js = "/assets/erp/js/erp.js"
+# web_include_css = "/assets/customization_tasks/css/customization_tasks.css"
+# web_include_js = "/assets/customization_tasks/js/customization_tasks.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "erp/public/scss/website"
+# website_theme_scss = "customization_tasks/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
@@ -28,9 +30,7 @@ required_apps = ["frappe/erpnext"]
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {
-#     "Sales Invoice" : "public/js/sales_invoice.js",
-# }
+# doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -38,7 +38,7 @@ required_apps = ["frappe/erpnext"]
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "erp/public/icons.svg"
+# app_include_icons = "customization_tasks/public/icons.svg"
 
 # Home Pages
 # ----------
@@ -62,43 +62,43 @@ required_apps = ["frappe/erpnext"]
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": "erp.utils.jinja_methods",
-# 	"filters": "erp.utils.jinja_filters"
+# 	"methods": "customization_tasks.utils.jinja_methods",
+# 	"filters": "customization_tasks.utils.jinja_filters"
 # }
 
 # Installation
 # ------------
 
-# before_install = "erp.install.before_install"
-# after_install = "erp.install.after_install"
+# before_install = "customization_tasks.install.before_install"
+# after_install = "customization_tasks.install.after_install"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "erp.uninstall.before_uninstall"
-# after_uninstall = "erp.uninstall.after_uninstall"
+# before_uninstall = "customization_tasks.uninstall.before_uninstall"
+# after_uninstall = "customization_tasks.uninstall.after_uninstall"
 
 # Integration Setup
 # ------------------
 # To set up dependencies/integrations with other apps
 # Name of the app being installed is passed as an argument
 
-# before_app_install = "erp.utils.before_app_install"
-# after_app_install = "erp.utils.after_app_install"
+# before_app_install = "customization_tasks.utils.before_app_install"
+# after_app_install = "customization_tasks.utils.after_app_install"
 
 # Integration Cleanup
 # -------------------
 # To clean up dependencies/integrations with other apps
 # Name of the app being uninstalled is passed as an argument
 
-# before_app_uninstall = "erp.utils.before_app_uninstall"
-# after_app_uninstall = "erp.utils.after_app_uninstall"
+# before_app_uninstall = "customization_tasks.utils.before_app_uninstall"
+# after_app_uninstall = "customization_tasks.utils.after_app_uninstall"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "erp.notifications.get_notification_config"
+# notification_config = "customization_tasks.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -116,11 +116,9 @@ required_apps = ["frappe/erpnext"]
 # ---------------
 # Override standard doctype classes
 
-override_doctype_class = {
-	# "Sales Invoice": "erp.public.py.sales_invoice.SellingController",
-	# "erpnext.controllers.SellingController.StockController": "erp.public.py.sales_invoice.SellingController",
-	# "erpnext.accounts.doctype.sales_invoice.SalesInvoice.SellingController": "erp.public.py.sales_invoice.SellingController"
-}
+# override_doctype_class = {
+# 	"ToDo": "custom_app.overrides.CustomToDo"
+# }
 
 # Document Events
 # ---------------
@@ -139,44 +137,39 @@ override_doctype_class = {
 
 # scheduler_events = {
 # 	"all": [
-# 		"erp.tasks.all"
+# 		"customization_tasks.tasks.all"
 # 	],
 # 	"daily": [
-# 		"erp.tasks.daily"
+# 		"customization_tasks.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"erp.tasks.hourly"
+# 		"customization_tasks.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"erp.tasks.weekly"
+# 		"customization_tasks.tasks.weekly"
 # 	],
 # 	"monthly": [
-# 		"erp.tasks.monthly"
+# 		"customization_tasks.tasks.monthly"
 # 	],
 # }
 
 # Testing
 # -------
 
-# before_tests = "erp.install.before_tests"
+# before_tests = "customization_tasks.install.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "erp.event.get_events"
-# }
-# override_whitelisted_methods = {
-#     "erpnext.controllers.selling_controller.SellingController.update_stock_ledger": "erp.public.py.sales_invoice.new_update_stock_ledger",
-#     "erpnext.controllers.selling_controller.SellingController.get_sle_for_source_warehouse": "erp.public.py.sales_invoice.new_get_sle_for_source_warehouse",
-#     "erpnext.controllers.selling_controller.SellingController.get_sle_for_target_warehouse": "erp.public.py.sales_invoice.new_get_sle_for_target_warehouse",
+# 	"frappe.desk.doctype.event.event.get_events": "customization_tasks.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-# 	"Task": "erp.task.get_dashboard_data"
+# 	"Task": "customization_tasks.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -190,13 +183,13 @@ override_doctype_class = {
 
 # Request Events
 # ----------------
-# before_request = ["erp.utils.before_request"]
-# after_request = ["erp.utils.after_request"]
+# before_request = ["customization_tasks.utils.before_request"]
+# after_request = ["customization_tasks.utils.after_request"]
 
 # Job Events
 # ----------
-# before_job = ["erp.utils.before_job"]
-# after_job = ["erp.utils.after_job"]
+# before_job = ["customization_tasks.utils.before_job"]
+# after_job = ["customization_tasks.utils.after_job"]
 
 # User Data Protection
 # --------------------
@@ -226,7 +219,7 @@ override_doctype_class = {
 # --------------------------------
 
 # auth_hooks = [
-# 	"erp.auth.validate"
+# 	"customization_tasks.auth.validate"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
@@ -235,8 +228,7 @@ override_doctype_class = {
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
-
+#comments
 from erpnext.controllers.selling_controller import SellingController
 import frappe
 from frappe import _, bold, throw
@@ -355,3 +347,22 @@ def new_get_sle_for_target_warehouse(self, item_row):
 SellingController.update_stock_ledger = new_update_stock_ledger
 SellingController.get_sle_for_source_warehouse = new_get_sle_for_source_warehouse
 SellingController.get_sle_for_target_warehouse = new_get_sle_for_target_warehouse
+
+fixtures=[
+    "Custom DocPerm",   
+    
+    {"dt":"Report","filters":[
+        [
+            "module","in",[
+               "Customization"
+            ]
+        ]
+    ]},
+    {"dt":"Client Script","filters":[
+        [
+            "module","in",[
+               "Customization"
+            ]
+        ]
+    ]}
+]
